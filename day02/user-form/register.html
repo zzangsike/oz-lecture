@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+</head>
+<body>
+    <header>User Registration</header>
+    <form action="#" method="post">
+        <p>
+            <label for="name">이름:</label>
+            <input type="text" id="name "name="username" placeholder="사용자 이름">
+        </p>
+        <p>
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com"/>
+        </p>
+        <p>
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" placeholder="비밀번호">
+        </p>
+        <p>
+            <label for="birthdate">생일:</label>
+            <input type="date" id="birthdate" name="birthdate" placeholder="생일을 선택하세요" />
+        </p>
+        <div>
+            <h3>나이를 입력하세요</h3>
+            <label for="age">나이:</label>
+            <input type="number" id="age" name="age" min="1" max="100" />
+        </div>
+        <div>
+            <h3>서비스 만족도</h3>
+            <label for="service">서비스 만족도:</label>
+            <input type="range" id="service" name="service" min="0" max="10" />
+        </div>
+        <br>
+        <!--여러개 선택되는 체크타입 -->
+        <div>
+        <h3>취미를 선택해주세요</h3>
+            <label for="hobby">취미:</label>
+            <input type="checkbox" id="hobbycoding" name="hobby" value="coding">코딩
+            <input type="checkbox" id="hobbygaming" name="hobby" value="gaming">게임
+            <input type="checkbox" id="hobbyreading" name="hobby" value="reading">독서
+        </div>
+        <!-- 한개만 선택되는 라디오 타입 -->
+        <div>
+            <h3>성별을 선택해주세요</h3>
+            <label for="gender">성별:</label>
+            <input type="radio" id="gender" name="gender" value="male">남성
+            <input type="radio" id="gender" name="gender" value="female">여성
+        </div>
+        <div>
+            <!-- 드롭다운 형태로 국가 선택가능 -->
+            <h3>국가를 선택해주세요</h3>
+            <label for="country">국가:</label>
+            <select name="country" id="country" dropzone="">
+                <option value="korea">한국</option>
+                <option value="usa">미국</option>
+                <option value="japan">일본</option>
+                <option value="canada">캐나다</option>
+                <option value="england">영국</option>
+            </select>
+        </div>
+        <hr>
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+    </form>
+    
+    <hr>
+
+
+     <video controls width="400">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="VIDEO.webm" type="video/webm">
+            브라우저가 비디오를 지원하지 않습니다.
+    </video>
+   
+    <div>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="blue" />
+    </svg>
+    
+    <canvas id="canvas" width="500" height="300">
+        해당 브라우저에서는 지원하지 않습니다.
+    </canvas>
+    </div>
+
+    <div>
+    <script type="text/javascript">
+        // 캔버스 객체를 생성합니다.
+        var canvas = document.getElementById("canvas");
+        // 캔버스 컨텍스트 객체를 생성합니다.
+        var ctx = canvas.getContext('2d');
+
+        // 새로운 경로를 생성합니다.
+        ctx.beginPath();
+        
+        // 그림을 그리는 메서드를 이용하여 캔버스에 그림을 그려줍니다.
+        // 위치 이동
+        ctx.moveTo(50, 50);
+        
+        // 현재 위치를 기준으로 해당 위치로 그리면서 이동
+        ctx.lineTo(100, 50);
+        
+        // 현재 위치를 기준으로 해당 위치로 그리면서 이동
+        ctx.lineTo(100, 100);
+        
+        // 현재 위치를 기준으로 해당 위치로 그리면서 이동
+        ctx.lineTo(50, 100);
+        
+        // 경로를 종료합니다.
+        ctx.closePath();
+        
+        // 그려진 경로의 출력 방법을 설정합니다.
+        ctx.stroke();
+    </script>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Your Website 000-0000-0000</p>
+    </footer>
+</body>
+</html>

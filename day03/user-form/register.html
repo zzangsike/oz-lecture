@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="b1">
+    <header>User Registration</header>
+    <form action="#" method="post" id="registration-form">
+        <p class="form-group">
+            <label for="name">이름:</label>
+            <input type="text" id="name "name="username" placeholder="사용자 이름">
+        </p>
+        <p class="form-group">
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com"/>
+        </p>
+        <p class="form-group">
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" placeholder="비밀번호">
+        </p>
+        <p class="form-group">
+            <label for="birthdate">생일:</label>
+            <input type="date" id="birthdate" name="birthdate" placeholder="생일을 선택하세요" />
+        </p>
+        <div>
+            <h3>나이를 입력하세요</h3>
+            <label for="age">나이:</label>
+            <input type="number" id="age" name="age" min="1" max="100" />
+        </div>
+        <div>
+            <h3>서비스 만족도</h3>
+            <label for="service">서비스 만족도:</label>
+            <input type="range" id="service" name="service" min="0" max="10" />
+        </div>
+        <br>
+        <!--여러개 선택되는 체크타입 -->
+        <div>
+        <h3>취미를 선택해주세요</h3>
+            <label for="hobby">취미:</label>
+            <input type="checkbox" id="hobbycoding" name="hobby" value="coding">코딩
+            <input type="checkbox" id="hobbygaming" name="hobby" value="gaming">게임
+            <input type="checkbox" id="hobbyreading" name="hobby" value="reading">독서
+        </div>
+        <!-- 한개만 선택되는 라디오 타입 -->
+        <div>
+            <h3>성별을 선택해주세요</h3>
+            <label for="gender">성별:</label>
+            <input type="radio" id="gender" name="gender" value="male">남성
+            <input type="radio" id="gender" name="gender" value="female">여성
+        </div>
+        <div>
+            <!-- 드롭다운 형태로 국가 선택가능 -->
+            <h3>국가를 선택해주세요</h3>
+            <label for="country">국가:</label>
+            <select name="country" id="country" dropzone="">
+                <option value="korea">한국</option>
+                <option value="usa">미국</option>
+                <option value="japan">일본</option>
+                <option value="canada">캐나다</option>
+                <option value="england">영국</option>
+            </select>
+        </div>
+        <hr>
+        <div id="buttons">
+            <button class="butons-btn" type="submit">제출</button>
+            <button class="butons-btn" type="reset">초기화</button>
+        </div>
+    </form>
+
+    <hr>
+    
+    <footer>
+        <p>&copy; 2025 Your Website 000-0000-0000</p>
+    </footer>
+</body>
+</html>
