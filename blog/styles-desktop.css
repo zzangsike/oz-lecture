@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 1rem 0 1rem 0;
+  border: 0.1rem #000;
+  top: 0;
+  background-color: magenta;
+}
+
+body {
+  max-width: 100%;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+#posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#posts {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+nav ul {
+  padding: 0;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  font-size: 3vh;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+article {
+  margin: auto;
+}
+
+aside {
+  font-size: 0.9rem;
+  gap: 1.5em;
+  padding: 1rem;
+  border-left: 3px solid #007bff;
+  margin-top: 1rem;
+}
+
+section {
+  padding: 2vw 1vw 2vw 1vw;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+footer {
+  font-size: 0.8rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* 데스크톱 */
+@media (max-width: 1023px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  aside {
+    width: 25vw;
+    margin-left: 2vw;
+  }
+}
+
+/* 태블릿 */
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body {
+    width: 90vw;
+  }
+  nav ul {
+    display: inline-block;
+    justify-content: space-around;
+  }
+}
